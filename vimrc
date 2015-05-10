@@ -1,26 +1,63 @@
-" Basics
-set autoindent			" Auto-Indentation
+" Basic options
+
+" Enable auto indeBasic options
+set autoindent
+
+" Allow me to delete stuff.
 set backspace=eol,start,indent	" Allow me to delete stuff
-set colorcolumn=72,80,120		" Right margins
-set confirm				" Ask for confirmation instead of failing
-set encoding=utf8		" Default encoding
-set ffs=unix,mac,dos	" Default line endings
+
+" Set the color of the column markers to 72, 80, 120.
+set colorcolumn=72,80,120
+
+" Ask for confirmation instead of failing on certaion operations.
+set confirm
+
+" Default encoding is UTF-8.
+set encoding=utf8
+
+" Default line endings, first UNIX, then Mac and Than DOS.
+set ffs=unix,mac,dos
+
+" Display whitespace.
 set list
 set listchars=extends:>,nbsp:·,precedes:<,tab:»\ ,trail:·
-set mouse=a				" Allow usage of mouse
-set nobackup			" Don't make backups.
-set noerrorbells		" No bells
-set novisualbell		" --||--
-set number				" Display line numbers
-set nowrap
-set ruler				" Display row/column
-set shiftwidth=4		" Use 4 spaces
-set sidescroll=8		" Keep 8 columns on scroll
-set smarttab			" Not sure
-set scrolloff=16		" Keep context around the lines when scrolling
-set tabstop=4			" Use 4 spaces
 
-" GUI settings
+" Allow the usage of the mouse.
+set mouse=a
+
+" Don't make any backups of the files.
+set nobackup
+
+" Disable any bells.
+set noerrorbells
+set novisualbell
+
+" Display the line numbers.
+set number
+
+" Disable wrapping of lines.
+set nowrap
+
+" Display the current position of the cursor (row/column).
+set ruler
+
+" Use four spaces.
+set shiftwidth=4
+
+" Keep eight columns visible when scrolling horizontally.
+set sidescroll=8
+
+" Use smart tab function.
+set smarttab
+
+" Keep sixteen lines visible when scrolling vertically.
+set scrolloff=16
+
+" Use four spaces.
+set tabstop=4
+
+
+" GUI options
 set columns=85
 set guioptions-=m
 set guioptions-=T
