@@ -12,13 +12,13 @@ set nobackup			" Don't make backups.
 set noerrorbells		" No bells
 set novisualbell		" --||--
 set number				" Display line numbers
+set nowrap
 set ruler				" Display row/column
 set shiftwidth=4		" Use 4 spaces
 set sidescroll=8		" Keep 8 columns on scroll
 set smarttab			" Not sure
 set scrolloff=16		" Keep context around the lines when scrolling
 set tabstop=4			" Use 4 spaces
-set wrap!
 
 " GUI settings
 set columns=85
@@ -41,9 +41,7 @@ set guifont=DejaVu\ Sans\ Mono\ 8
 filetype indent plugin on
 filetype plugin on
 
-
-" automatically open and close the popup menu / preview window      
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif      
-set completeopt=menuone,menu,longest,preview
-
+" Completion
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
