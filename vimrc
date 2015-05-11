@@ -66,14 +66,24 @@ set lines=100
 " Cursor
 set guicursor+=a:blinkon0
 
-" Plugins
-execute pathogen#infect()
-
 " Font and colors
 syntax on
 colorscheme darkspectrum
 set background=dark
-set guifont=DejaVu\ Sans\ Mono\ 8
+
+if has("gui_running")
+	if has("gui_gtk2")
+		set guifont=DejaVu\ Sans\ Mono\ 8
+	elseif has("gui_photon")
+		set guifont=DejaVu\ Sans\ Mono:s8
+	elseif has("gui_kde")
+		set guifont=DejaVu\ Sans\ Mono/8/-1/5/50/0/0/0/1/0
+	elseif has("x11")
+		set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
+	else
+	set guifont=DejaVu_Sans_Mono:h8:cDEFAULT
+	endif
+endif
 
 filetype indent plugin on
 filetype plugin on
@@ -81,4 +91,7 @@ filetype plugin on
 " Completion
 set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Plugins
+execute pathogen#infect()
 
