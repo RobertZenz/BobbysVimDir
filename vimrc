@@ -56,6 +56,8 @@ set scrolloff=16
 " Use four spaces.
 set tabstop=4
 
+" Make completion nicer.
+set wildmode=longest,list
 
 " GUI options
 set columns=85
