@@ -97,3 +97,11 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Plugins
 execute pathogen#infect()
 
+" Tagbar configuration
+let g:tagbar_compact=1
+let g:tagbar_expand=1
+let g:tagbar_show_visibility=1
+let g:tagbar_singleclick=1
+let g:tagbar_sort=0
+let g:tagbar_width=40
+
