@@ -105,3 +105,6 @@ let g:tagbar_singleclick=1
 let g:tagbar_sort=0
 let g:tagbar_width=40
 
+" Commands on startup
+autocmd VimEnter * nested :TagbarOpen
+
