@@ -100,6 +100,7 @@ execute pathogen#infect()
 " Tagbar configuration
 let g:tagbar_compact=1
 let g:tagbar_expand=1
+let g:tagbar_left=1
 let g:tagbar_show_visibility=1
 let g:tagbar_singleclick=1
 let g:tagbar_sort=0
