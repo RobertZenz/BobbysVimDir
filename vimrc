@@ -106,6 +106,15 @@ let g:tagbar_singleclick=1
 let g:tagbar_sort=0
 let g:tagbar_width=40
 
+let g:tagbar_type_markdown = {
+	\ 'ctagstype' : 'markdown',
+	\ 'kinds' : [
+		\ 'h:Heading_L1',
+		\ 'i:Heading_L2',
+		\ 'k:Heading_L3'
+	\ ]
+\ }
+
 " Commands on startup
 autocmd VimEnter * nested :TagbarOpen
 
