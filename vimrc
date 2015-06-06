@@ -83,16 +83,18 @@ if has("gui_running")
 	elseif has("x11")
 		set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
 	else
-	set guifont=DejaVu_Sans_Mono:h8:cDEFAULT
+		set guifont=DejaVu_Sans_Mono:h8:cDEFAULT
 	endif
 endif
 
 filetype indent plugin on
 filetype plugin on
 
+
 " Completion
 set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 
 " Plugins
 execute pathogen#infect()
@@ -114,6 +116,13 @@ let g:tagbar_type_markdown = {
 		\ 'k:Heading_L3'
 	\ ]
 \ }
+
+
+" Bindings
+map <C-TAB> :bn<CR>
+map <C-S-TAB> :bp<CR>
+map <C-F4> :bn<CR>:bd#<CR>
+
 
 " Commands on startup
 autocmd VimEnter * nested :TagbarOpen
