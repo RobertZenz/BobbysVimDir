@@ -125,5 +125,7 @@ map <C-F4> :bn<CR>:bd#<CR>
 
 
 " Commands on startup
-autocmd VimEnter * nested :TagbarOpen
+if !exists("g:no_tagbar")
+	autocmd VimEnter * nested :TagbarOpen
+endif
 
