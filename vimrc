@@ -96,6 +96,12 @@ set completeopt=longest,menuone
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
+" VIM should not remove whitespace from empty lines.
+inoremap <CR> <CR>x<BS>
+nnoremap o ox<BS>
+nnoremap O Ox<BS>
+
+
 " Plugins
 execute pathogen#infect()
 
