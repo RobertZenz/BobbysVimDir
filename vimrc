@@ -127,7 +127,7 @@ let g:tagbar_type_markdown = {
 " Bindings
 map <C-TAB> :bn<CR>
 map <C-S-TAB> :bp<CR>
-map <C-F4> :bn<CR>:bd#<CR>
+map <C-F4> :bp<CR>:bd#<CR>
 
 
 " Commands on startup
