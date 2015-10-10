@@ -61,9 +61,12 @@ set wildmode=longest,list
 
 " GUI options
 set columns=85
+set cursorline
 set guioptions-=m
 set guioptions-=T
 set lines=100
+set showmatch
+
 
 " Cursor
 set guicursor+=a:blinkon0
