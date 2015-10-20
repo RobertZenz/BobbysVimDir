@@ -78,15 +78,15 @@ set background=dark
 
 if has("gui_running")
 	if has("gui_gtk2")
-		set guifont=DejaVu\ Sans\ Mono\ 8
+		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 8
 	elseif has("gui_photon")
-		set guifont=DejaVu\ Sans\ Mono:s8
+		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:s8
 	elseif has("gui_kde")
-		set guifont=DejaVu\ Sans\ Mono/8/-1/5/50/0/0/0/1/0
+		set guifont=DejaVu\ Sans\ Mono\ for\ Powerline/8/-1/5/50/0/0/0/1/0
 	elseif has("x11")
 		set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
 	else
-		set guifont=DejaVu_Sans_Mono:h8:cDEFAULT
+		set guifont=DejaVu_Sans_Mono_for_Powerline:h8:cDEFAULT
 	endif
 endif
 
@@ -107,6 +107,9 @@ nnoremap O Ox<BS>
 
 " Plugins
 execute pathogen#infect()
+
+" Airline
+let g:airline_powerline_fonts=1
 
 " Tagbar configuration
 let g:tagbar_compact=1
