@@ -1,7 +1,9 @@
 " Basic options
 
-" Enable auto indeBasic options
+" Enable auto indentation
 set autoindent
+set copyindent
+set preserveindent
 
 " Allow me to delete stuff.
 set backspace=eol,start,indent	" Allow me to delete stuff
